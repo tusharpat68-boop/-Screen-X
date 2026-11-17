@@ -20,7 +20,7 @@ import androidx.media3.transformer.Transformer
 import androidx.media3.transformer.VideoEncoderSettings
 import androidx.media3.effect.BitmapOverlay
 import androidx.media3.effect.OverlayEffect
-import androidx.media3.effect.StaticOverlaySettings
+import androidx.media3.effect.OverlaySettings
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Paint
@@ -235,7 +235,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         }
         val pad = (w * 0.025f).coerceAtLeast(16f)
         canvas.drawText(text, (w - paint.measureText(text) - pad).coerceAtLeast(pad), h - pad, paint)
-        val settings = StaticOverlaySettings.Builder().setBackgroundFrameAnchor(0.92f, -0.88f)
+        val settings = OverlaySettings.Builder().setBackgroundFrameAnchor(0.92f, -0.88f)
             .setOverlayFrameAnchor(1f, -1f).build()
         return BitmapOverlay.createStaticBitmapOverlay(bitmap, settings)
     }

@@ -18,8 +18,6 @@ import java.io.File
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 
-class AudioCaptureException(message: String) : Exception(message)
-
 /**
  * Captures internal (playback) audio and/or the microphone, mixes them to stereo PCM,
  * encodes AAC and writes an audio-only MP4 file. The video engine later merges this file
