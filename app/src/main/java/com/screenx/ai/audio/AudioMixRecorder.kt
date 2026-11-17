@@ -265,6 +265,7 @@ class AudioMixRecorder(
 
     // ---------------------------------------------------------------- audio sources
 
+    @SuppressLint("MissingPermission")
     private fun buildInternal(): AudioRecord {
         val capture = AudioPlaybackCaptureConfiguration.Builder(projection)
             .addMatchingUsage(AudioAttributes.USAGE_MEDIA)
